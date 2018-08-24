@@ -1,0 +1,32 @@
+h1 {
+    text-align: center;
+}
+
+body {
+    background-image: url('./images/bg.jpg');
+    background-size: cover;
+}
+
+button {
+    border-radius: 25px;
+}
+
+.burgers {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.not-devoured {
+    display: flex;
+    flex-direction: column;
+}
+
+.devoured {
+    display: flex;
+    flex-direction: column;
+}
+
+.burger-form {
+    display: flex;
+    justify-content: center;
+}

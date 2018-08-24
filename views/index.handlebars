@@ -1,0 +1,45 @@
+<h1>Burgers</h1>
+
+<div class="burgers">
+
+    <div class="not-devoured">
+        <h2>Burgers Yet To Be Devoured</h2>
+            <ul>
+                {{#each burger}}
+                    {{#unless this.devoured}} 
+                        <li>
+                            {{this.name}}
+                                {{#unless devoured}}
+                                    <button class="devour" data-id="{{this.id}}">DEVOUR</button>
+                                 {{/unless}}
+                        </li>  
+                    {{/unless}} 
+                {{/each}}
+            </ul>
+    </div>
+    
+    <div class="devoured">
+        <h2>Burgers That Have Been Devoured</h2>
+            <ul>
+                {{#each burger}} 
+                    {{#if this.devoured}} 
+                       <li>
+                            {{this.name}}
+                                {{#unless devoured}}
+                                    <button class="devour" data-id="{{this.id}}">DEVOUR</button>
+                                 {{/unless}}
+                        </li> 
+                    {{/if}} 
+                {{/each}}
+            </ul>
+    </div>
+    
+</div>
+
+<div class="burger-form">
+    <div class="form">
+        <h2>Add a Burger</h2>
+        <lable>Input a Burger: </lable><input type="text" id="burgerInput">
+        <button id="submit">Submit</button>
+    </div>
+</div>
